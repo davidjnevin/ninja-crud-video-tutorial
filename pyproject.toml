@@ -1,0 +1,5 @@
+[tool.pyright]
+
+reportMissingImports = false
+reportMissingTypeStubs = false
+reportGeneralTypeIssues = false

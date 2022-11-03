@@ -9,12 +9,12 @@ router = Router()
 
 
 @router.get("/success", url_name="success")
-def success_message(request):
+def success_message(request) -> dict[str, str]:
     return {"message": "success!"}
 
 
 @router.get("/tracks", response=List[TrackSchema])
-def tracks(request, title: Optional[str] = None):
+def tracks(request, title: Optional[str] = None) -> list[TrackSchema]:
     "Adding an argument to the funciton allows for query parameters."
     if title:
         return Track.objects.filter(title__icontains=title)

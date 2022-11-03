@@ -11,6 +11,12 @@ class Command(BaseCommand):
     help = "Create tracks from JSON file"
 
     def handle(self, *args, **kwargs):
+        """handle.
+
+        :param self:
+        :param args:
+        :param kwargs:
+        """
         # set the path to the datafile
         datafile = settings.BASE_DIR / "data" / "tracks.json"
         assert datafile.exists()

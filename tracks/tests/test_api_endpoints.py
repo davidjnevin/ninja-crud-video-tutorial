@@ -12,6 +12,10 @@ from django.urls import resolve, reverse, reverse_lazy
 
 
 def test_success_message(client):
+    """test_success_message.
+
+    :param client:
+    """
     # Arrange
     # url = "http://127.0.0.1:8000/api/tracks/success"
     url = reverse_lazy("tracks_api:success")
@@ -25,6 +29,10 @@ def test_success_message(client):
 
 @pytest.mark.django_db
 def test_tracks(client):
+    """test_tracks.
+
+    :param client:
+    """
     # Arrange
     # url = "http://127.0.0.1:8000/api/tracks/tracks"
     url = reverse_lazy("tracks_api:tracks")
